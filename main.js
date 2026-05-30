@@ -31,4 +31,26 @@ function initLanguage() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', initLanguage);
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem(THEME_KEY, theme);
+  const themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+
+function initTheme() {
+  const saved = localStorage.getItem(THEME_KEY) || 'dark';
+  applyTheme(saved);
+  const themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const current = localStorage.getItem(THEME_KEY) || 'dark';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initLanguage();
+  initTheme();
+});
