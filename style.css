@@ -627,47 +627,83 @@ button {
 .mission-vision-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-md);
-  margin-top: var(--space-md);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
 }
 
 .mv-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-lg);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.mv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.mv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.mv-card:hover::before {
+  opacity: 1;
 }
 
 .mv-card-icon {
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin: 0 auto var(--space-sm);
+  font-size: 1.8rem;
+  margin: 0 auto var(--space-md);
+  transition: transform var(--transition);
+}
+
+.mv-card:hover .mv-card-icon {
+  transform: scale(1.1) rotate(-5deg);
 }
 
 .mv-card-icon.mission {
-  background: rgba(21, 101, 192, 0.15);
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.2), rgba(21, 101, 192, 0.1));
   color: var(--primary-light);
+  box-shadow: 0 4px 16px rgba(21, 101, 192, 0.2);
 }
 
 .mv-card-icon.vision {
-  background: rgba(0, 137, 123, 0.15);
+  background: linear-gradient(135deg, rgba(0, 137, 123, 0.2), rgba(0, 137, 123, 0.1));
   color: var(--accent-light);
+  box-shadow: 0 4px 16px rgba(0, 137, 123, 0.2);
 }
 
 .mv-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: var(--space-xs);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
 }
 
 .mv-card p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* ── PROFILES ────────────────────────────────────────── */
