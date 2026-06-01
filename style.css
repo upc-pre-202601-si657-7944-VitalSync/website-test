@@ -179,6 +179,17 @@ button {
   transform: translateY(-2px);
 }
 
+.hero .btn-outline {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.hero .btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .btn-nav {
   padding: 0.6rem 1.4rem;
   font-size: 0.85rem;
@@ -253,7 +264,8 @@ button {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
+  flex: 1;
 }
 
 .nav-logo {
@@ -267,7 +279,7 @@ button {
 }
 
 .nav-logo-img {
-  height: 52px;
+  height: 60px;
   width: auto;
   transition: transform var(--transition);
 }
