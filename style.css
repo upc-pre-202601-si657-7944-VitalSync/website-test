@@ -866,11 +866,13 @@ button {
   font-size: 1.5rem;
   color: #fff;
   border: 3px solid var(--border);
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), transform var(--transition);
+  object-fit: cover;
 }
 
 .team-member:hover .team-avatar {
   border-color: var(--primary-light);
+  transform: scale(1.08);
 }
 
 .team-member h4 {
