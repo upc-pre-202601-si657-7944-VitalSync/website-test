@@ -11,6 +11,7 @@
   <meta property="og:description" content="Real-time health monitoring and communication platform for elderly care facilities and families." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -33,7 +34,7 @@
 
         <div class="nav-actions">
           <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
-          <button class="nav-btn" id="themeToggle" aria-label="Toggle theme">☀️</button>
+          <button class="nav-btn" id="themeToggle" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
           <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
             <span></span>
             <span></span>
@@ -64,7 +65,7 @@
 
       <div class="hero-content">
         <div class="hero-badge fade-up">
-          <span>🏥</span>
+          <i data-lucide="hospital" class="icon-sm"></i>
           <span data-section="banner" data-value="badge">VitalSync Health-Tech Startup</span>
         </div>
 
@@ -127,14 +128,14 @@
 
         <div class="mission-vision-grid fade-up">
           <div class="mv-card">
-            <div class="mv-card-icon mission" aria-hidden="true">🎯</div>
+            <div class="mv-card-icon mission" aria-hidden="true"><i data-lucide="target"></i></div>
             <h3 data-section="solution" data-value="missionTitle">Our Mission</h3>
             <p data-section="solution" data-value="missionText">
               Design and develop digital health solutions that improve elderly care management through secure, scalable platforms centered on information integration.
             </p>
           </div>
           <div class="mv-card">
-            <div class="mv-card-icon vision" aria-hidden="true">🔭</div>
+            <div class="mv-card-icon vision" aria-hidden="true"><i data-lucide="telescope"></i></div>
             <h3 data-section="solution" data-value="visionTitle">Our Vision</h3>
             <p data-section="solution" data-value="visionText">
               Become the leading startup in software systems for elderly care, standing out for modern architectures and efficient use of technology that scales across care contexts.
@@ -154,7 +155,7 @@
 
         <div class="profiles-grid fade-up">
           <div class="profile-card">
-            <div class="profile-icon" aria-hidden="true">👨‍👩‍👧</div>
+            <div class="profile-icon" aria-hidden="true"><i data-lucide="users"></i></div>
             <h3 data-section="profiles" data-value="familyTitle">Family Support Network</h3>
             <p data-section="profiles" data-value="familyText">
               Direct relatives of elderly residents who need real-time visibility into their loved one's health status, clinical alerts, and direct communication with caregivers — without depending on informal channels.
@@ -163,7 +164,7 @@
           </div>
 
           <div class="profile-card">
-            <div class="profile-icon" aria-hidden="true">🩺</div>
+            <div class="profile-icon" aria-hidden="true"><i data-lucide="stethoscope"></i></div>
             <h3 data-section="profiles" data-value="caregiverTitle">Care Staff</h3>
             <p data-section="profiles" data-value="caregiverText">
               Nurses, technicians, and caregivers who need to centralize clinical records, automate medication alerts, and ensure information continuity between shifts — reducing manual workload and human error.
@@ -184,32 +185,32 @@
 
         <div class="features-grid fade-up">
           <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">❤️</div>
+            <div class="feature-icon" aria-hidden="true"><i data-lucide="heart-pulse"></i></div>
             <h3 data-section="features" data-value="vitalsTitle">Real-Time Vital Signs</h3>
             <p data-section="features" data-value="vitalsText">Monitor heart rate, oxygen saturation, blood pressure and more from a centralized dashboard with instant updates.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🔔</div>
+            <div class="feature-icon" aria-hidden="true"><i data-lucide="bell-ring"></i></div>
             <h3 data-section="features" data-value="alertsTitle">Critical Alerts</h3>
             <p data-section="features" data-value="alertsText">Automatic push notifications when vital signs exceed safe thresholds, enabling immediate family and caregiver response.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">💊</div>
+            <div class="feature-icon" aria-hidden="true"><i data-lucide="pill"></i></div>
             <h3 data-section="features" data-value="medsTitle">Medication Management</h3>
             <p data-section="features" data-value="medsText">Inventory tracking, scheduled dose reminders, expiration alerts, and auditable administration logs for full transparency.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">💬</div>
+            <div class="feature-icon" aria-hidden="true"><i data-lucide="message-circle"></i></div>
             <h3 data-section="features" data-value="chatTitle">Family-Caregiver Chat</h3>
             <p data-section="features" data-value="chatText">Direct messaging within the platform, replacing informal WhatsApp communication with traceable, organized conversations.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">📊</div>
+            <div class="feature-icon" aria-hidden="true"><i data-lucide="bar-chart-3"></i></div>
             <h3 data-section="features" data-value="reportsTitle">Clinical Reports</h3>
             <p data-section="features" data-value="reportsText">Weekly health summaries with charts, indicators, and downloadable PDF reports for medical consultations.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🔄</div>
+            <div class="feature-icon" aria-hidden="true"><i data-lucide="refresh-cw"></i></div>
             <h3 data-section="features" data-value="shiftsTitle">Shift Handoff</h3>
             <p data-section="features" data-value="shiftsText">Digital shift change notes ensuring critical information continuity between caregivers, reducing preventable errors.</p>
           </div>
@@ -260,7 +261,7 @@
 
         <div class="video-facade fade-up" id="productVideo" data-video-id="dQw4w9WgXcQ">
           <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="MediBridge product demo video thumbnail" loading="lazy" />
-          <button class="video-facade-play" aria-label="Play product video">▶</button>
+          <button class="video-facade-play" aria-label="Play product video"><i data-lucide="play"></i></button>
         </div>
       </div>
     </section>
@@ -334,7 +335,7 @@
             <p>Software Engineering</p>
           </div>
           <div class="team-member">
-            <img src="assets/img/team/Paucar Meneses, Jeremy Alián.png" alt="Jeremy Paucar" class="team-avatar" />
+            <img src="assets/img/team/Paucar Meneses, Jeremy Alion.png" alt="Jeremy Paucar" class="team-avatar" />
             <h4>Jeremy Paucar</h4>
             <p>Software Engineering</p>
           </div>
@@ -342,7 +343,7 @@
 
         <div class="video-facade fade-up" id="teamVideo" data-video-id="dQw4w9WgXcQ">
           <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="VitalSync team video thumbnail" loading="lazy" />
-          <button class="video-facade-play" aria-label="Play team video">▶</button>
+          <button class="video-facade-play" aria-label="Play team video"><i data-lucide="play"></i></button>
         </div>
       </div>
     </section>

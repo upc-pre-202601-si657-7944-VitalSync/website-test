@@ -35,7 +35,12 @@ function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem(THEME_KEY, theme);
   const themeBtn = document.getElementById('themeToggle');
-  if (themeBtn) themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+  if (themeBtn) {
+    themeBtn.innerHTML = theme === 'dark'
+      ? '<i data-lucide="sun"></i>'
+      : '<i data-lucide="moon"></i>';
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }
 }
 
 function initTheme() {
@@ -161,4 +166,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initVideoFacade();
   initHamburger();
   initFaq();
+  if (typeof lucide !== 'undefined') lucide.createIcons();
 });
