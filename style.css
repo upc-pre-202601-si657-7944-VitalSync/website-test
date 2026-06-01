@@ -179,6 +179,31 @@ button {
   transform: translateY(-2px);
 }
 
+.btn-nav {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.85rem;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: var(--nav-text);
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btn-nav:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-mobile {
+  margin-top: var(--space-sm);
+  text-align: center;
+  display: block;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+}
+
 .card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
@@ -223,6 +248,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
 }
 
 .nav-logo {
@@ -440,12 +471,22 @@ button {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(11, 17, 32, 0.65) 0%,
-    rgba(11, 17, 32, 0.80) 50%,
+    rgba(11, 17, 32, 0.75) 0%,
+    rgba(11, 17, 32, 0.85) 50%,
     rgba(11, 17, 32, 0.95) 85%,
     var(--bg) 100%
   );
   z-index: 1;
+}
+
+[data-theme="light"] .hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(11, 17, 32, 0.80) 0%,
+    rgba(11, 17, 32, 0.88) 50%,
+    rgba(11, 17, 32, 0.96) 85%,
+    var(--bg) 100%
+  );
 }
 
 .hero-content {
@@ -454,6 +495,19 @@ button {
   text-align: center;
   max-width: 800px;
   padding: var(--space-2xl) var(--space-md);
+  color: #F9FAFB;
+}
+
+.hero-content .hero-subtitle {
+  color: rgba(249, 250, 251, 0.8);
+}
+
+.hero-content .hero-badge {
+  color: var(--accent-light);
+}
+
+.hero-content .kpi-label {
+  color: rgba(249, 250, 251, 0.6);
 }
 
 .hero-badge {
