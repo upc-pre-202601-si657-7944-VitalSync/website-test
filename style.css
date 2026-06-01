@@ -235,6 +235,16 @@ button {
   color: var(--nav-text);
 }
 
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  transition: transform var(--transition);
+}
+
+.nav-logo:hover .nav-logo-img {
+  transform: scale(1.05);
+}
+
 .nav-logo-icon {
   width: 36px;
   height: 36px;
