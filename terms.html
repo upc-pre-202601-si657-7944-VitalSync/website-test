@@ -24,6 +24,8 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
   <!-- NAV -->
   <header>
     <nav class="nav" aria-label="Main navigation">
@@ -43,10 +45,10 @@
         </div>
 
         <div class="nav-actions">
-          <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
-          <button class="nav-btn" id="themeToggle" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
+          <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
+          <button class="nav-btn" type="button" id="themeToggle" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
           <a href="#" class="btn btn-nav" data-section="nav" data-value="signIn">Sign In</a>
-          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <button class="hamburger" type="button" id="hamburger" aria-label="Open menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -65,7 +67,7 @@
     <a href="index.html#about-the-team" data-section="nav" data-value="team">Team</a>
   </div>
 
-  <main>
+  <main id="main" tabindex="-1">
     <div class="container terms-content">
       <h1 class="section-title fade-up" data-section="terms" data-value="title">Terms and Conditions</h1>
       <p class="section-subtitle fade-up" data-section="terms" data-value="lastUpdated">Last updated: May 2026</p>
