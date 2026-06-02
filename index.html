@@ -11,6 +11,18 @@
   <meta property="og:description" content="Real-time health monitoring and communication platform for elderly care facilities and families." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('site-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+        var l = localStorage.getItem('site-lang') || 'en';
+        document.documentElement.setAttribute('lang', l);
+        var langBtn = document.getElementById('langToggle');
+        if (langBtn) langBtn.textContent = l.toUpperCase();
+      } catch (e) {}
+    })();
+  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>

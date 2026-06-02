@@ -8,6 +8,18 @@
   <meta name="keywords" content="terms, conditions, MediBridge, VitalSync, privacy, ethics" />
   <meta name="author" content="VitalSync" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('site-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+        var l = localStorage.getItem('site-lang') || 'en';
+        document.documentElement.setAttribute('lang', l);
+        var langBtn = document.getElementById('langToggle');
+        if (langBtn) langBtn.textContent = l.toUpperCase();
+      } catch (e) {}
+    })();
+  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
