@@ -35,47 +35,7 @@
 
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- NAV -->
-  <header>
-    <nav class="nav" aria-label="Main navigation">
-      <div class="container">
-        <div class="nav-left">
-          <a href="#banner" class="nav-logo">
-            <img src="assets/img/medibridge_logo.svg" alt="MediBridge Logo" class="nav-logo-img" />
-          </a>
-          <ul class="nav-links">
-            <li><a href="#solution" data-section="nav" data-value="solution">Solution</a></li>
-            <li><a href="#profiles" data-section="nav" data-value="profiles">Segments</a></li>
-            <li><a href="#features" data-section="nav" data-value="features">Features</a></li>
-            <li><a href="#how-it-works" data-section="nav" data-value="howItWorks">How It Works</a></li>
-            <li><a href="#subscription" data-section="nav" data-value="pricing">Pricing</a></li>
-            <li><a href="#about-the-team" data-section="nav" data-value="team">Team</a></li>
-          </ul>
-        </div>
-
-        <div class="nav-actions">
-          <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
-          <button class="nav-btn" type="button" id="themeToggle" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
-          <a href="#" class="btn btn-nav" data-section="nav" data-value="signIn">Sign In</a>
-          <button class="hamburger" type="button" id="hamburger" aria-label="Open menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-    <a href="#solution" data-section="nav" data-value="solution">Solution</a>
-    <a href="#profiles" data-section="nav" data-value="profiles">Segments</a>
-    <a href="#features" data-section="nav" data-value="features">Features</a>
-    <a href="#how-it-works" data-section="nav" data-value="howItWorks">How It Works</a>
-    <a href="#subscription" data-section="nav" data-value="pricing">Pricing</a>
-    <a href="#about-the-team" data-section="nav" data-value="team">Team</a>
-    <a href="#" class="btn btn-nav btn-mobile" data-section="nav" data-value="signIn">Sign In</a>
-  </div>
+  <div id="nav-mount"></div>
 
   <main id="main" tabindex="-1">
 
@@ -420,50 +380,9 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#banner" class="nav-logo">
-            <img src="assets/img/medibridge_logo.svg" alt="MediBridge Logo" class="nav-logo-img" />
-          </a>
-          <p data-section="footer" data-value="description">Centralized geriatric care monitoring platform by VitalSync. Connecting families and caregivers through technology.</p>
-        </div>
+  <div id="footer-mount"></div>
 
-        <div class="footer-col">
-          <h4 data-section="footer" data-value="platformTitle">Platform</h4>
-          <ul>
-            <li><a href="#features" data-section="footer" data-value="featuresLink">Features</a></li>
-            <li><a href="#subscription" data-section="footer" data-value="pricingLink">Pricing</a></li>
-            <li><a href="#how-it-works" data-section="footer" data-value="howItWorksLink">How It Works</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 data-section="footer" data-value="companyTitle">Company</h4>
-          <ul>
-            <li><a href="#solution" data-section="footer" data-value="aboutLink">About Us</a></li>
-            <li><a href="#about-the-team" data-section="footer" data-value="teamLink">Team</a></li>
-            <li><a href="#faq" data-section="footer" data-value="faqLink">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 data-section="footer" data-value="legalTitle">Legal</h4>
-          <ul>
-            <li><a href="terms.html" data-section="footer" data-value="termsLink">Terms & Conditions</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 VitalSync. All rights reserved.</p>
-        <p data-section="footer" data-value="madeWith">Made with dedication for elderly care in Latin America.</p>
-      </div>
-    </div>
-  </footer>
-
+  <script src="components/layout.js" defer></script>
   <script src="main.js" defer></script>
   <script type="application/ld+json">
   {
