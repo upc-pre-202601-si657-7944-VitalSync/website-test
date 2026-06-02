@@ -7,57 +7,37 @@
   <meta name="description" content="MediBridge connects families and caregivers with real-time health monitoring, clinical alerts, and centralized communication for elderly care in nursing homes." />
   <meta name="keywords" content="geriatric care, elderly monitoring, nursing home, health tracking, caregiver communication, VitalSync, MediBridge" />
   <meta name="author" content="VitalSync" />
+  <link rel="canonical" href="https://vitalsync.pe/" />
   <meta property="og:title" content="MediBridge — Centralized Geriatric Care Monitoring Platform" />
   <meta property="og:description" content="Real-time health monitoring and communication platform for elderly care facilities and families." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vitalsync.pe/" />
+  <meta property="og:site_name" content="MediBridge by VitalSync" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MediBridge — Centralized Geriatric Care Monitoring Platform" />
+  <meta name="twitter:description" content="Real-time health monitoring and communication platform for elderly care facilities and families." />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('site-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+        var l = localStorage.getItem('site-lang') || 'en';
+        document.documentElement.setAttribute('lang', l);
+        var langBtn = document.getElementById('langToggle');
+        if (langBtn) langBtn.textContent = l.toUpperCase();
+      } catch (e) {}
+    })();
+  </script>
+  <script src="assets/js/lucide.min.js"></script>
 </head>
 <body>
 
-  <!-- NAV -->
-  <header>
-    <nav class="nav" aria-label="Main navigation">
-      <div class="container">
-        <div class="nav-left">
-          <a href="#banner" class="nav-logo">
-            <img src="assets/img/medibridge_logo.svg" alt="MediBridge Logo" class="nav-logo-img" />
-          </a>
-          <ul class="nav-links">
-            <li><a href="#solution" data-section="nav" data-value="solution">Solution</a></li>
-            <li><a href="#profiles" data-section="nav" data-value="profiles">Segments</a></li>
-            <li><a href="#features" data-section="nav" data-value="features">Features</a></li>
-            <li><a href="#how-it-works" data-section="nav" data-value="howItWorks">How It Works</a></li>
-            <li><a href="#subscription" data-section="nav" data-value="pricing">Pricing</a></li>
-            <li><a href="#about-the-team" data-section="nav" data-value="team">Team</a></li>
-          </ul>
-        </div>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-        <div class="nav-actions">
-          <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
-          <button class="nav-btn" id="themeToggle" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
-          <a href="#" class="btn btn-nav" data-section="nav" data-value="signIn">Sign In</a>
-          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <div id="nav-mount"></div>
 
-  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-    <a href="#solution" data-section="nav" data-value="solution">Solution</a>
-    <a href="#profiles" data-section="nav" data-value="profiles">Segments</a>
-    <a href="#features" data-section="nav" data-value="features">Features</a>
-    <a href="#how-it-works" data-section="nav" data-value="howItWorks">How It Works</a>
-    <a href="#subscription" data-section="nav" data-value="pricing">Pricing</a>
-    <a href="#about-the-team" data-section="nav" data-value="team">Team</a>
-    <a href="#" class="btn btn-nav btn-mobile" data-section="nav" data-value="signIn">Sign In</a>
-  </div>
-
-  <main>
+  <main id="main" tabindex="-1">
 
     <!-- HERO -->
     <section class="hero" id="banner">
@@ -400,52 +380,29 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#banner" class="nav-logo">
-            <img src="assets/img/medibridge_logo.svg" alt="MediBridge Logo" class="nav-logo-img" />
-          </a>
-          <p data-section="footer" data-value="description">Centralized geriatric care monitoring platform by VitalSync. Connecting families and caregivers through technology.</p>
-        </div>
+  <div id="footer-mount"></div>
 
-        <div class="footer-col">
-          <h4 data-section="footer" data-value="platformTitle">Platform</h4>
-          <ul>
-            <li><a href="#features" data-section="footer" data-value="featuresLink">Features</a></li>
-            <li><a href="#subscription" data-section="footer" data-value="pricingLink">Pricing</a></li>
-            <li><a href="#how-it-works" data-section="footer" data-value="howItWorksLink">How It Works</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 data-section="footer" data-value="companyTitle">Company</h4>
-          <ul>
-            <li><a href="#solution" data-section="footer" data-value="aboutLink">About Us</a></li>
-            <li><a href="#about-the-team" data-section="footer" data-value="teamLink">Team</a></li>
-            <li><a href="#faq" data-section="footer" data-value="faqLink">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 data-section="footer" data-value="legalTitle">Legal</h4>
-          <ul>
-            <li><a href="terms.html" data-section="footer" data-value="termsLink">Terms & Conditions</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 VitalSync. All rights reserved.</p>
-        <p data-section="footer" data-value="madeWith">Made with dedication for elderly care in Latin America.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="components/layout.js" defer></script>
   <script src="main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MediBridge",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "description": "Centralized geriatric care monitoring platform connecting families and caregivers through real-time health monitoring, clinical alerts, and direct communication.",
+    "offers": {
+      "@type": "Offer",
+      "price": "49",
+      "priceCurrency": "PEN"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "VitalSync",
+      "url": "https://vitalsync.pe/"
+    }
+  }
+  </script>
 </body>
 </html>
