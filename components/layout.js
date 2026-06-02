@@ -10,6 +10,7 @@
     { key: 'features', label: 'Features', href: '#features' },
     { key: 'howItWorks', label: 'How It Works', href: '#how-it-works' },
     { key: 'pricing', label: 'Pricing', href: '#subscription' },
+    { key: 'insights', label: 'Insights', href: '#insights' },
     { key: 'team', label: 'About the Team', href: '#about-the-team' }
   ];
 
