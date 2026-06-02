@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const isTerms = /terms\.html$/.test(window.location.pathname);
+  const isTerms = /\/terms(?:\.html)?\/?$/.test(window.location.pathname);
   const hashPrefix = isTerms ? 'index.html' : '';
 
   const NAV_LINKS = [
