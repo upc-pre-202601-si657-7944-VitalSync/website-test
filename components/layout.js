@@ -29,6 +29,10 @@
     ]
   };
 
+  const FOOTER_LINKS_TERMS_EXTRA = [
+    { key: 'homeLink', label: 'Home', href: 'index.html' }
+  ];
+
   function withPrefix(href) {
     if (!hashPrefix) return href;
     if (href.startsWith('#')) return hashPrefix + href;
@@ -85,6 +89,15 @@
       })
       .join('');
 
+    const extra = isTerms
+      ? FOOTER_LINKS_TERMS_EXTRA
+          .map(
+            (l) =>
+              `<li><a href="${l.href}" data-section="footer" data-value="${l.key}">${l.label}</a></li>`
+          )
+          .join('')
+      : '';
+
     return `
       <footer class="footer">
         <div class="container">
@@ -105,7 +118,7 @@
             </div>
             <div class="footer-col">
               <h4 data-section="footer" data-value="legalTitle">Legal</h4>
-              <ul>${legal}</ul>
+              <ul>${legal}${extra}</ul>
             </div>
           </div>
           <div class="footer-bottom">
