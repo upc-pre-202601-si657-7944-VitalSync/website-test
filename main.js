@@ -71,15 +71,16 @@ function initFadeUp() {
 }
 
 function animateCounter(el) {
-  const target = parseInt(el.getAttribute('data-count'), 10);
+  const target = parseFloat(el.getAttribute('data-count'));
   const suffix = el.getAttribute('data-suffix') || '';
+  const decimals = Number.isInteger(target) ? 0 : 1;
   const duration = 1800;
   const start = performance.now();
 
   function formatNumber(n) {
     if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
     if (n >= 1000) return (n / 1000).toFixed(0) + 'K';
-    return n.toString();
+    return decimals ? n.toFixed(decimals) : Math.floor(n).toString();
   }
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -91,7 +92,7 @@ function animateCounter(el) {
     const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(eased * target);
+    const current = eased * target;
     el.textContent = formatNumber(current) + suffix;
     if (progress < 1) requestAnimationFrame(step);
   }
