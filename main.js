@@ -82,6 +82,11 @@ function animateCounter(el) {
     return n.toString();
   }
 
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.textContent = formatNumber(target) + suffix;
+    return;
+  }
+
   function step(now) {
     const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
