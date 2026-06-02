@@ -39,6 +39,8 @@
   --space-xl: 4rem;
   --space-2xl: 6rem;
 
+  --nav-height: 82px;
+
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -68,6 +70,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
   font-size: 16px;
 }
 
@@ -426,7 +429,7 @@ button {
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 60px;
+  top: var(--nav-height);
   left: 0;
   right: 0;
   bottom: 0;
