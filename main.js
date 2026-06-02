@@ -173,6 +173,34 @@ function initFaq() {
   });
 }
 
+function initActiveSection() {
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  if (!links.length) return;
+
+  const linkByHash = new Map();
+  links.forEach((link) => linkByHash.set(link.getAttribute('href').slice(1), link));
+
+  const sections = Array.from(linkByHash.keys())
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  if (!sections.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const link = linkByHash.get(entry.target.id);
+        if (!link) return;
+        links.forEach((l) => l.removeAttribute('aria-current'));
+        link.setAttribute('aria-current', 'location');
+      });
+    },
+    { rootMargin: '-40% 0px -55% 0px' }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
   initTheme();
@@ -181,5 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initVideoFacade();
   initHamburger();
   initFaq();
+  initActiveSection();
   if (typeof lucide !== 'undefined') lucide.createIcons();
 });
