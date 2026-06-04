@@ -750,8 +750,14 @@ button {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: visible;
   transition: all var(--transition);
+}
+
+.profile-card-img-wrap {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .profile-card-img {
