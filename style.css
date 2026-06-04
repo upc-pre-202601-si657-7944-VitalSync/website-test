@@ -318,6 +318,12 @@ button {
   height: 65px;
   width: auto;
   transition: transform var(--transition);
+  border-radius: 50%;
+}
+
+[data-theme="dark"] .nav-logo-img {
+  background: rgba(224, 247, 244, 0.12);
+  box-shadow: 0 0 0 6px rgba(20, 184, 166, 0.12);
 }
 
 .nav-logo:hover .nav-logo-img {
