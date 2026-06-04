@@ -5,8 +5,8 @@
       <stop offset="1" stop-color="#2563EB"/>
     </linearGradient>
     <linearGradient id="softCircle" x1="168" y1="124" x2="860" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E0F7F4"/>
-      <stop offset="1" stop-color="#EAF1FF"/>
+      <stop stop-color="#14B8A6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0.12"/>
     </linearGradient>
     <filter id="shadow" x="90" y="90" width="844" height="844" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#0F172A" flood-opacity="0.15"/>
