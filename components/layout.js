@@ -61,7 +61,7 @@
             <div class="nav-actions">
               <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
               <button class="nav-btn" type="button" id="themeToggle" aria-label="Toggle theme"><i data-lucide="${preThemeIcon()}"></i></button>
-              <a href="#" class="btn btn-nav" data-section="nav" data-value="signIn">Sign In</a>
+              <a href="https://medibridge-family-app.vercel.app/" class="btn btn-nav" data-section="nav" data-value="signIn" target="_blank" rel="noopener">Sign In</a>
               <button class="hamburger" type="button" id="hamburger" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
               </button>
@@ -71,7 +71,7 @@
       </header>
       <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
         ${NAV_LINKS.map((l) => `<a href="${withPrefix(l.href)}" data-section="nav" data-value="${l.key}">${l.label}</a>`).join('')}
-        <a href="#" class="btn btn-nav btn-mobile" data-section="nav" data-value="signIn">Sign In</a>
+        <a href="https://medibridge-family-app.vercel.app/" class="btn btn-nav btn-mobile" data-section="nav" data-value="signIn" target="_blank" rel="noopener">Sign In</a>
       </div>
     `;
   }
